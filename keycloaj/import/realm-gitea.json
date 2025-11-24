@@ -1,0 +1,26 @@
+{
+  "realm": "gitea",
+  "enabled": true,
+  "displayName": "Gitea Realm",
+  "clients": [
+    {
+      "clientId": "gitea",
+      "name": "Gitea",
+      "enabled": true,
+      "protocol": "openid-connect",
+      "publicClient": false,
+      "secret": "gitea-keycloak-secret",
+      "redirectUris": [
+        "http://localhost:3000/user/oauth2/keycloak/callback"
+      ],
+      "webOrigins": [
+        "http://localhost:3000"
+      ],
+      "baseUrl": "http://localhost:3000/",
+      "standardFlowEnabled": true,
+      "implicitFlowEnabled": false,
+      "directAccessGrantsEnabled": true,
+      "serviceAccountsEnabled": false
+    }
+  ]
+}
